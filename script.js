@@ -1,20 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.image-item img');
-    const urlDisplay = document.getElementById('url-display');
-    const goToUrlButton = document.getElementById('go-to-url');
-    let currentUrl = null;
+document.addEventListener("DOMContentLoaded", function() {
+    const movies = [
+        { title: "电影 1", img: "movie1.jpg", link: "https://example.com/movie1" },
+        { title: "电影 2", img: "movie2.jpg", link: "https://example.com/movie2" },
+        { title: "电影 3", img: "movie3.jpg", link: "https://example.com/movie3" }
+    ];
 
-    images.forEach(image => {
-        image.addEventListener('click', function() {
-            currentUrl = this.dataset.url;
-            urlDisplay.textContent = currentUrl;
-            goToUrlButton.disabled = false;
-        });
-    });
+    const container = document.getElementById("movie-container");
 
-    goToUrlButton.addEventListener('click', function() {
-        if (currentUrl) {
-            window.open(currentUrl, '_blank'); // 在新标签页中打开
-        }
+    movies.forEach(movie => {
+        const movieElement = document.createElement("div");
+        movieElement.classList.add("movie");
+        movieElement.innerHTML = `<img src="${movie.img}" alt="${movie.title}">`;
+        movieElement.onclick = () => window.location.href = movie.link;
+        container.appendChild(movieElement);
     });
 });
