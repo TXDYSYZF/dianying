@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // 切换显示/隐藏状态
             if (description.style.display === "none" || description.style.display === "") {
-                description.style.display = "block";
+                description.style.display = "block"; // 显示信息
             } else {
-                description.style.display = "none";
+                description.style.display = "none"; // 隐藏信息
             }
         });
     });
