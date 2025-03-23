@@ -1,53 +1,91 @@
+/* 全局样式 */
 body {
-    background-color: black;
-    color: white;
-    text-align: center;
+    background-color: #000; /* 黑色背景 */
+    color: white; /* 文字白色 */
+    text-align: center; /* 居中对齐 */
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* 标题样式 */
 h1 {
     margin-top: 20px;
+    font-size: 28px;
 }
 
+/* 电影展示区域 */
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* 允许换行 */
-    justify-content: center; /* 居中对齐 */
-    gap: 15px; /* 图片之间的间距 */
+    flex-wrap: wrap; /* 允许自动换行 */
+    justify-content: center; /* 水平居中 */
+    gap: 15px; /* 电影卡片之间的间距 */
     padding: 20px;
 }
 
+/* 每个电影块的样式 */
 .movie {
-    background-color: #222;
+    background-color: #222; /* 深色背景 */
     padding: 10px;
     border-radius: 10px;
     text-align: center;
-    max-width: 200px; /* 每个电影块的最大宽度 */
-    flex: 1 1 calc(25% - 20px); /* 适应不同屏幕大小 */
+    max-width: 200px; /* 控制每个电影块的宽度 */
+    flex: 1 1 calc(25% - 20px); /* 适应不同屏幕大小，每行最多4个 */
+    transition: transform 0.3s ease-in-out;
 }
 
+/* 电影图片样式 */
 .movie img {
-    width: 100%; /* 图片宽度自适应 */
+    width: 100%; /* 让图片适应容器 */
     height: auto;
-    border-radius: 10px;
+    border-radius: 10px; /* 圆角 */
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
+/* 鼠标悬停时图片放大 */
 .movie img:hover {
-    transform: scale(1.05); /* 鼠标悬停时放大 */
+    transform: scale(1.05);
 }
 
+/* 电影描述文本 */
 .description {
     margin-top: 10px;
     font-size: 14px;
+    color: #ccc;
 }
 
+/* 电影链接样式 */
 .description a {
-    color: #ffcc00;
+    display: block;
+    color: #ffcc00; /* 黄色字体 */
     text-decoration: none;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: color 0.3s;
 }
 
+/* 鼠标悬停时链接变色 */
 .description a:hover {
+    color: #ff9900;
     text-decoration: underline;
+}
+
+/* 响应式布局 */
+@media (max-width: 1024px) {
+    .movie {
+        flex: 1 1 calc(33.33% - 20px); /* 中等屏幕每行显示3个 */
+    }
+}
+
+@media (max-width: 768px) {
+    .movie {
+        flex: 1 1 calc(50% - 20px); /* 小屏幕每行显示2个 */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie {
+        flex: 1 1 100%; /* 手机端每行显示1个 */
+    }
 }
