@@ -1,14 +1,68 @@
-#linkBox p {
-    font-size: 18px;
-    margin: 10px 0;
-    color: white;
+/* 设置整体页面背景颜色和字体 */
+body {
+    background-color: #000; /* 黑色背景 */
+    color: #fff; /* 白色字体 */
+    font-family: Arial, sans-serif; /* 字体 */
+    text-align: center; /* 文字居中 */
+    margin: 0;
+    padding: 0;
 }
 
+/* 页面标题的样式 */
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #fff;
+}
+
+/* 电影图片展示的样式 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* 单个电影图片的样式 */
+.gallery img {
+    width: 200px; /* 图片宽度 */
+    height: 300px; /* 图片高度 */
+    object-fit: cover; /* 保持图片的比例 */
+    cursor: pointer; /* 鼠标悬停时显示手指图标 */
+    border: 2px solid #fff; /* 白色边框 */
+    border-radius: 5px; /* 边角圆润 */
+    transition: transform 0.3s; /* 图片缩放动画 */
+}
+
+/* 图片的鼠标悬停效果 */
+.gallery img:hover {
+    transform: scale(1.1); /* 鼠标悬停时图片放大 */
+}
+
+/* 显示电影链接和描述的区域样式 */
+#linkBox {
+    margin-top: 20px;
+    font-size: 18px;
+    color: yellow; /* 文字颜色 */
+    padding: 10px;
+    border-top: 1px solid #fff; /* 上边框 */
+    background-color: #222; /* 背景色稍微深一点 */
+}
+
+/* 显示描述文字的样式 */
+#linkBox p {
+    margin: 10px 0; /* 每段文字的上下间距 */
+    font-size: 18px; /* 字体大小 */
+}
+
+/* 链接的样式 */
 #linkBox a {
-    color: yellow;
-    text-decoration: none;
+    color: yellow; /* 链接颜色 */
+    text-decoration: none; /* 去除链接的下划线 */
 }
 
 #linkBox a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
 }
