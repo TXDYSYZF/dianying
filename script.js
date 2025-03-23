@@ -1,6 +1,8 @@
-function showMovieDetails(description, link, linkText) {
-    document.getElementById('linkBox').innerHTML = `
-        <p>${description}</p>
-        <p><a href="${link}" target="_blank" style="color: yellow;">${linkText}</a></p>
-    `;
+function showMovieDetails(movieId) {
+    // 隐藏所有电影描述
+    let descriptions = document.querySelectorAll('.description');
+    descriptions.forEach(desc => desc.style.display = 'none');
+
+    // 只显示当前点击的电影描述
+    document.getElementById(movieId).style.display = 'block';
 }
