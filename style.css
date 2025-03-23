@@ -50,6 +50,7 @@ h1 {
 
 /* 电影描述文本 */
 .description {
+    display: none; /* 初始时隐藏电影描述 */
     margin-top: 10px;
     font-size: 14px;
     color: #ccc;
