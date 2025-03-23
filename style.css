@@ -1,6 +1,6 @@
 body {
-    background-color: #000; /* 黑色背景 */
-    color: #fff; /* 白色字体 */
+    background-color: #000;
+    color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -13,6 +13,7 @@ h1 {
     color: #fff;
 }
 
+/* 电影展示区 */
 .gallery {
     display: flex;
     justify-content: center;
@@ -21,7 +22,13 @@ h1 {
     flex-wrap: wrap;
 }
 
-.gallery img {
+/* 每部电影的样式 */
+.movie {
+    text-align: center;
+    width: 220px; /* 控制单个电影块大小 */
+}
+
+.movie img {
     width: 200px;
     height: 300px;
     object-fit: cover;
@@ -31,15 +38,25 @@ h1 {
     transition: transform 0.3s;
 }
 
-.gallery img:hover {
+.movie img:hover {
     transform: scale(1.1);
 }
 
-#linkBox {
-    margin-top: 20px;
-    font-size: 18px;
+/* 电影描述文字 */
+.description {
+    margin-top: 10px;
+    font-size: 16px;
     color: yellow;
-    padding: 10px;
-    border-top: 1px solid #fff;
-    background-color: #222;
+    display: none; /* 初始隐藏 */
+}
+
+/* 电影链接样式 */
+.description a {
+    color: yellow;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.description a:hover {
+    text-decoration: underline;
 }
