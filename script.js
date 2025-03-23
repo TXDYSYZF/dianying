@@ -1,8 +1,8 @@
 // 电影列表（图片路径 + 对应链接）
 const movies = [
-    { image: "images/movie1.jpg", link: "https://vip.ffzy-video.com/share/68dd09b9ff11f0df5624a690fe0f6729" },
-    { image: "images/movie2.jpg", link: "https://example.com/movie2" },
-    { image: "images/movie3.jpg", link: "https://example.com/movie3" }
+    { image: "movie1.jpg", link: "https://example.com/movie1" },
+    { image: "movie2.jpg", link: "https://example.com/movie2" },
+    { image: "movie3.jpg", link: "https://example.com/movie3" }
 ];
 
 // 动态生成电影图片
