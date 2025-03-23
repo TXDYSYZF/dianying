@@ -1,19 +1,29 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>电影网站</title>
+    <title>图片链接展示</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>电影网站</h1>
-    <div class="gallery">
-        <img src="movie1.jpg" alt="毒液3" onclick="showLink('https://example.com/movie1')">
-        <img src="movie2.jpg" alt="电影2" onclick="showLink('https://example.com/movie2')">
-        <img src="movie3.jpg" alt="电影3" onclick="showLink('https://example.com/movie3')">
+    <div class="image-container">
+        <div class="image-item">
+            <img src="images/image1.jpg" alt="毒液3" data-url="https://www.example1.com">
+        </div>
+        <div class="image-item">
+            <img src="images/image2.jpg" alt="图片 2" data-url="https://www.example2.com">
+        </div>
+        <div class="image-item">
+            <img src="images/image3.jpg" alt="图片 3" data-url="https://www.example3.com">
+        </div>
+        </div>
+
+    <div id="url-display">
+        点击图片显示网址
     </div>
-    <div id="linkBox">点击图片显示电影链接</div>
+
+    <button id="go-to-url" disabled>前往网址</button>
 
     <script src="script.js"></script>
 </body>
