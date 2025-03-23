@@ -1,8 +1,19 @@
-function showMovieDetails(movieId) {
-    // 隐藏所有电影描述
-    let descriptions = document.querySelectorAll('.description');
-    descriptions.forEach(desc => desc.style.display = 'none');
+document.addEventListener("DOMContentLoaded", function () {
+    // 获取所有的电影项
+    let movies = document.querySelectorAll(".movie img");
 
-    // 只显示当前点击的电影描述
-    document.getElementById(movieId).style.display = 'block';
-}
+    // 遍历每个电影图片，添加点击事件
+    movies.forEach(img => {
+        img.addEventListener("click", function () {
+            // 获取对应的描述信息
+            let description = this.nextElementSibling;
+
+            // 切换显示/隐藏状态
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        });
+    });
+});
