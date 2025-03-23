@@ -8,8 +8,16 @@
 </head>
 <body>
     <h1>电影网站</h1>
-    <div class="gallery" id="gallery"></div>
-    <div id="linkBox">点击图片显示电影链接</div>
+
+    <!-- 电影展示区 -->
+    <div class="gallery">
+        <img src="movie1.jpg" alt="电影1" onclick="showMovieDetails('电影1的简介', 'https://example.com/movie1')">
+        <img src="movie2.jpg" alt="电影2" onclick="showMovieDetails('电影2的简介', 'https://example.com/movie2')">
+        <img src="movie3.jpg" alt="电影3" onclick="showMovieDetails('电影3的简介', 'https://example.com/movie3')">
+    </div>
+
+    <!-- 电影信息展示区 -->
+    <div id="linkBox">点击图片显示电影信息</div>
 
     <script src="script.js"></script>
 </body>
