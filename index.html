@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>电影网站</h1>
 
     <!-- 电影展示区 -->
     <div class="gallery">
         <div class="movie" onclick="showModal('movie1')">
-            <img src="https://raw.githubusercontent.com/TXDYSYZF/dianying/dianying/movie1.jpg" alt="毒液">
+            <img src="movie1.jpg" alt="毒液">
             <p class="movie-title">毒液3</p>
         </div>
         <div class="movie" onclick="showModal('movie2')">
@@ -25,12 +24,12 @@
         </div>
     </div>
 
-    <!-- 选项框 -->
+    <!-- 弹出框 -->
     <div id="movie-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title">电影标题</h2>
-            <div id="episode-list"></div>
+            <p id="modal-title"></p>
+            <a id="movie-link" href="#" target="_blank">点击观看</a>
         </div>
     </div>
 
