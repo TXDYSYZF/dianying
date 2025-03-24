@@ -7,17 +7,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>电影网站</h1>
 
+    <!-- 电影展示区 -->
     <div class="gallery">
-        <!-- 电影示例 -->
         <div class="movie">
-            <img src="movie1.jpg" alt="毒液">
-            <p class="movie-title">毒液3</p>
-            <div class="movie-links">
-                <a href="https://vip.ffzy-video.com/share/68dd09b9ff11f0df5624a690fe0f6729" target="_blank">点击观看</a>
-            </div>
+            <img src="movie1.jpg" alt="毒液" srcset="movie1-small.jpg 500w, movie1-medium.jpg 1000w, movie1.jpg 2000w" sizes="(max-width: 768px) 90vw, 33vw" onclick="showMovieDetails('movie1-info')">
+            <p class="description" id="movie1-info">毒液3<br>
+                <a href="https://vip.ffzy-video.com/share/68dd09b9ff11f0df5624a690fe0f6729" target="_blank">点击观看电影1</a>
+            </p>
         </div>
-
         <!-- 电视剧示例 -->
         <div class="movie">
             <img src="tvshow.jpg" alt="电视剧">
@@ -53,6 +52,5 @@
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
