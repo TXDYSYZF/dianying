@@ -73,7 +73,16 @@ body {
     background-color: #444;
 }
 
-/* 🔹 手机适配 */
+/* 图片适配样式 */
+.movie img {
+    width: 100%; /* 图片宽度占满容器 */
+    height: auto; /* 高度自动适配，保持比例 */
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    object-fit: cover; /* 图片裁剪 */
+}
+
+/* 适配手机和电脑屏幕 */
 @media screen and (max-width: 768px) {
     .gallery {
         flex-direction: column;
