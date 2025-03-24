@@ -1,4 +1,4 @@
-/* 全局样式 */
+/* 页面背景 */
 body {
     background-color: #000;
     color: white;
@@ -8,13 +8,7 @@ body {
     padding: 0;
 }
 
-/* 标题 */
-h1 {
-    margin-top: 20px;
-    font-size: 28px;
-}
-
-/* 电影展示区域 */
+/* 电影展示区 */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -31,7 +25,6 @@ h1 {
     text-align: center;
     max-width: 200px;
     flex: 1 1 calc(25% - 20px);
-    transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -40,10 +33,10 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s;
 }
 
-.movie:hover {
+.movie:hover img {
     transform: scale(1.05);
 }
 
@@ -54,7 +47,7 @@ h1 {
     font-weight: bold;
 }
 
-/* 模态框 */
+/* 弹出框 */
 .modal {
     display: none;
     position: fixed;
@@ -63,37 +56,38 @@ h1 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* 模态框内容 */
+/* 弹出框内容 */
 .modal-content {
     background-color: #222;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
     text-align: center;
+    width: 80%;
+    max-width: 300px;
+    position: relative;
 }
 
 /* 关闭按钮 */
 .close {
     position: absolute;
     right: 15px;
-    top: 15px;
+    top: 10px;
     font-size: 24px;
     color: white;
     cursor: pointer;
 }
 
-/* 剧集按钮 */
-.episode {
-    display: block;
-    margin: 10px 0;
-    padding: 10px;
+/* 观看按钮 */
+#movie-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
     background-color: #ffcc00;
     color: #222;
     text-decoration: none;
@@ -102,6 +96,6 @@ h1 {
     transition: background 0.3s;
 }
 
-.episode:hover {
+#movie-link:hover {
     background-color: #ff9900;
 }
