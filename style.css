@@ -1,7 +1,7 @@
-/* 全局样式 */
+/* 页面整体黑色背景 */
 body {
     background-color: #000;
-    color: white;
+    color: #fff;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
@@ -13,41 +13,37 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     padding: 20px;
 }
 
 /* 电影单元 */
 .movie {
-    background-color: #222;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 200px;
     cursor: pointer;
     transition: transform 0.3s;
+    max-width: 180px;
 }
 
-.movie:hover {
-    transform: scale(1.05);
-}
-
-/* 电影图片 */
 .movie img {
     width: 100%;
+    height: auto;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-/* 电影标题 */
 .movie-title {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 16px;
-    font-weight: bold;
 }
 
-/* 弹出框（隐藏默认状态） */
+/* 鼠标悬停放大效果 */
+.movie:hover {
+    transform: scale(1.1);
+}
+
+/* 弹出窗口 */
 .modal {
-    display: none;
+    display: none; /* 确保默认隐藏 */
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -55,7 +51,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -67,33 +62,32 @@ body {
     border-radius: 10px;
     text-align: center;
     width: 300px;
-    position: relative;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 /* 关闭按钮 */
-.close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
+.close-btn {
+    float: right;
     font-size: 24px;
-    color: white;
     cursor: pointer;
+    color: #fff;
 }
 
-/* 观看按钮 */
-#movie-link {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #ffcc00;
-    color: #222;
+.close-btn:hover {
+    color: red;
+}
+
+/* 观看链接 */
+#modal-links a {
+    display: block;
+    background-color: #ff5722;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
     text-decoration: none;
-    font-weight: bold;
     border-radius: 5px;
-    transition: background 0.3s;
 }
 
-#movie-link:hover {
-    background-color: #ff9900;
+#modal-links a:hover {
+    background-color: #e64a19;
 }
