@@ -19,19 +19,19 @@ body {
 
 /* 单个电影/电视剧 */
 .movie {
-    width: 200px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
     position: relative; /* 使子元素定位 */
 }
 
+/* 让所有图片保持原始大小 */
 .movie img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
+    max-width: 100%; /* 确保不会超出容器 */
+    height: auto; /* 保持原始比例 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    object-fit: contain; /* 保持完整显示，不裁剪 */
 }
 
 /* 电影/电视剧名称 */
@@ -53,7 +53,6 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
     text-align: center;
 }
 
@@ -62,7 +61,7 @@ body {
     display: inline-block;
     background-color: #222;
     color: white;
-    padding: 10px;
+    padding: 8px 12px;
     margin: 5px;
     text-decoration: none;
     border-radius: 5px;
@@ -73,22 +72,21 @@ body {
     background-color: #444;
 }
 
-/* 图片适配样式 */
-.movie img {
-    max-width: 100%; /* 确保图片不会超出容器 */
-    height: auto; /* 保持原始比例 */
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    object-fit: contain; /* 保持完整显示，不裁剪 */
+/* 适配不同屏幕，让行数自动调整 */
+@media screen and (min-width: 1200px) {
+    .movie {
+        width: 18%; /* 电脑端，一行最多5个 */
+    }
 }
 
-/* 适配手机和电脑屏幕 */
-@media screen and (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
+@media screen and (max-width: 1199px) and (min-width: 768px) {
     .movie {
-        width: 90%;
+        width: 30%; /* 平板端，一行最多3个 */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .movie {
+        width: 45%; /* 手机端，一行最多2个 */
     }
 }
