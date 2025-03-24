@@ -9,41 +9,42 @@
 <body>
 
     <div class="gallery">
-        <div class="movie" onclick="showModal('毒液3', [{'title': '点击观看', 'url': 'https://vip.ffzy-video.com/share/68dd09b9ff11f0df5624a690fe0f6729'}])">
-            <img src="movie1.jpg" alt="毒液3">
+        <div class="movie" data-link="https://vip.ffzy-video.com/share/68dd09b9ff11f0df5624a690fe0f6729">
+            <img src="movie1.jpg" alt="毒液">
             <p class="movie-title">毒液3</p>
         </div>
-        <div class="movie" onclick="showModal('电影2', [{'title': '点击观看', 'url': 'https://example.com/movie2'}])">
+        <div class="movie" data-link="https://example.com/movie2">
             <img src="movie2.jpg" alt="电影2">
             <p class="movie-title">电影2</p>
         </div>
-        <div class="movie" onclick="showModal('电影3', [{'title': '点击观看', 'url': 'https://example.com/movie3'}])">
+        <div class="movie" data-link="https://example.com/movie3">
             <img src="movie3.jpg" alt="电影3">
             <p class="movie-title">电影3</p>
         </div>
-        <div class="movie" onclick="showModal('电影4', [{'title': '点击观看', 'url': 'https://example.com/movie4'}])">
+        <div class="movie" data-link="https://example.com/movie4">
             <img src="movie4.jpg" alt="电影4">
             <p class="movie-title">电影4</p>
         </div>
-        <div class="movie" onclick="showModal('电影5', [{'title': '点击观看', 'url': 'https://example.com/movie5'}])">
+        <div class="movie" data-link="https://example.com/movie5">
             <img src="movie5.jpg" alt="电影5">
             <p class="movie-title">电影5</p>
         </div>
-        <div class="movie" onclick="showModal('电影6', [{'title': '点击观看', 'url': 'https://example.com/movie6'}])">
+        <div class="movie" data-link="https://example.com/movie6">
             <img src="movie6.jpg" alt="电影6">
             <p class="movie-title">电影6</p>
         </div>
     </div>
 
-    <!-- 电影信息弹窗 -->
-    <div id="movie-modal" class="modal">
+    <!-- 电影弹窗 -->
+    <div id="movieModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <span class="close-btn" id="closeModal">&times;</span>
             <h2 id="modal-title"></h2>
             <div id="modal-links"></div>
         </div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
