@@ -1,4 +1,4 @@
-/* 页面整体黑色背景 */
+/* 页面黑色背景 */
 body {
     background-color: #000;
     color: #fff;
@@ -8,42 +8,45 @@ body {
     padding: 0;
 }
 
-/* 电影展示区 */
+/* 电影展示区（确保图片对齐） */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
 }
 
-/* 电影单元 */
+/* 电影单元（居中+固定尺寸） */
 .movie {
+    width: 200px;
+    text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
-    max-width: 180px;
 }
 
 .movie img {
     width: 100%;
-    height: auto;
+    height: 280px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 .movie-title {
-    margin-top: 5px;
+    margin-top: 8px;
     font-size: 16px;
+    font-weight: bold;
 }
 
-/* 鼠标悬停放大效果 */
+/* 悬停放大 */
 .movie:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* 弹出窗口 */
+/* 电影信息弹出窗口（居中） */
 .modal {
-    display: none; /* 确保默认隐藏 */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -51,43 +54,47 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* 弹出框内容 */
+/* 弹出框样式（去掉彩色按钮，改为高雅风格） */
 .modal-content {
-    background-color: #222;
+    background-color: #111;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 300px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    width: 280px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-/* 关闭按钮 */
+/* 关闭按钮（简洁白色） */
 .close-btn {
     float: right;
-    font-size: 24px;
+    font-size: 22px;
     cursor: pointer;
-    color: #fff;
+    color: #bbb;
 }
 
 .close-btn:hover {
-    color: red;
+    color: white;
 }
 
-/* 观看链接 */
+/* 观看链接（简洁白色边框按钮） */
 #modal-links a {
     display: block;
-    background-color: #ff5722;
-    color: white;
+    border: 1px solid #888;
+    color: #bbb;
     padding: 10px;
     margin: 10px 0;
     text-decoration: none;
     border-radius: 5px;
+    transition: all 0.3s;
 }
 
 #modal-links a:hover {
-    background-color: #e64a19;
+    background-color: #222;
+    border-color: white;
+    color: white;
 }
