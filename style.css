@@ -23,6 +23,7 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
+    position: relative; /* 使子元素定位 */
 }
 
 .movie img {
@@ -45,13 +46,18 @@ body {
     transform: scale(1.05);
 }
 
-/* 观看按钮区域（默认隐藏） */
+/* 按钮区域（默认隐藏） */
 .movie-links {
-    display: none;
-    margin-top: 10px;
+    display: none; /* 默认隐藏按钮 */
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
 }
 
-/* 按钮通用样式 */
+/* 按钮样式 */
 .movie-links a {
     display: inline-block;
     background-color: #222;
