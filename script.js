@@ -1,35 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 获取所有电影项
+    // 获取所有电影/电视剧项
     const movies = document.querySelectorAll(".movie");
-    const modal = document.getElementById("movieModal");
-    const modalTitle = document.getElementById("modal-title");
-    const modalLinks = document.getElementById("modal-links");
-    const closeModal = document.getElementById("closeModal");
 
-    // 监听点击电影事件
     movies.forEach(movie => {
         movie.addEventListener("click", function () {
-            const title = this.querySelector(".movie-title").textContent;
-            const link = this.getAttribute("data-link");
+            const links = this.querySelector(".movie-links");
 
-            // 设置弹窗内容
-            modalTitle.textContent = title;
-            modalLinks.innerHTML = `<a href="${link}" target="_blank">点击观看</a>`;
+            // 隐藏其他电影/电视剧的按钮
+            document.querySelectorAll(".movie-links").forEach(el => {
+                if (el !== links) el.style.display = "none";
+            });
 
-            // 显示弹窗
-            modal.style.display = "flex";
+            // 切换当前电影/电视剧的按钮
+            if (links.style.display === "none" || links.style.display === "") {
+                links.style.display = "block";
+            } else {
+                links.style.display = "none";
+            }
         });
-    });
-
-    // 关闭弹窗
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // 点击外部关闭弹窗
-    window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-            modal.style.display = "none";
-        }
     });
 });
