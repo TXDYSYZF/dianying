@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-/* 电影展示区 */
+/* 电影/电视剧展示区 */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +17,7 @@ body {
     padding: 20px;
 }
 
-/* 单个电影容器 */
+/* 单个电影/电视剧 */
 .movie {
     width: 200px;
     text-align: center;
@@ -33,7 +33,7 @@ body {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-/* 电影名称 */
+/* 电影/电视剧名称 */
 .movie-title {
     margin-top: 8px;
     font-size: 16px;
@@ -45,59 +45,26 @@ body {
     transform: scale(1.05);
 }
 
-/* 弹出窗口（默认隐藏） */
-.modal {
+/* 观看按钮区域（默认隐藏） */
+.movie-links {
     display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 10px;
 }
 
-/* 弹出框内容 */
-.modal-content {
-    background-color: #111;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 280px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
-}
-
-/* 关闭按钮 */
-.close-btn {
-    float: right;
-    font-size: 22px;
-    cursor: pointer;
-    color: #bbb;
-}
-
-.close-btn:hover {
+/* 按钮通用样式 */
+.movie-links a {
+    display: inline-block;
+    background-color: #222;
     color: white;
-}
-
-/* 观看链接按钮 */
-#modal-links a {
-    display: block;
-    border: 1px solid #888;
-    color: #bbb;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s;
 }
 
-#modal-links a:hover {
-    background-color: #222;
-    border-color: white;
-    color: white;
+.movie-links a:hover {
+    background-color: #444;
 }
 
 /* 🔹 手机适配 */
