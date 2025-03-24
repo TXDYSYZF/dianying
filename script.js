@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     movies.forEach(img => {
         img.addEventListener("click", function () {
-            // 先隐藏所有描述信息
-            document.querySelectorAll(".description").forEach(desc => {
-                desc.style.display = "none";
-            });
-
-            // 显示当前点击的电影描述信息
             let description = this.parentElement.querySelector(".description");
-            description.style.display = "block";
+
+            // 切换当前电影的信息显示/隐藏
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block"; // 显示当前电影信息
+            } else {
+                description.style.display = "none"; // 隐藏当前电影信息
+            }
         });
     });
 });
