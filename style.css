@@ -1,4 +1,4 @@
-/* 页面黑色背景 */
+/* 黑色背景 */
 body {
     background-color: #000;
     color: #fff;
@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-/* 电影展示区（确保图片对齐） */
+/* 电影展示区 */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -17,7 +17,7 @@ body {
     padding: 20px;
 }
 
-/* 电影单元（居中+固定尺寸） */
+/* 单个电影容器 */
 .movie {
     width: 200px;
     text-align: center;
@@ -33,6 +33,7 @@ body {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
+/* 电影名称 */
 .movie-title {
     margin-top: 8px;
     font-size: 16px;
@@ -44,9 +45,9 @@ body {
     transform: scale(1.05);
 }
 
-/* 电影信息弹出窗口（居中） */
+/* 弹出窗口（默认隐藏） */
 .modal {
-    display: none; /* 确保默认隐藏 */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -54,12 +55,12 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
-/* 弹出框样式（去掉彩色按钮，改为高雅风格） */
+/* 弹出框内容 */
 .modal-content {
     background-color: #111;
     padding: 20px;
@@ -69,7 +70,7 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
-/* 关闭按钮（简洁白色） */
+/* 关闭按钮 */
 .close-btn {
     float: right;
     font-size: 22px;
@@ -81,7 +82,7 @@ body {
     color: white;
 }
 
-/* 观看链接（简洁白色边框按钮） */
+/* 观看链接按钮 */
 #modal-links a {
     display: block;
     border: 1px solid #888;
@@ -97,4 +98,15 @@ body {
     background-color: #222;
     border-color: white;
     color: white;
+}
+
+/* 🔹 手机适配 */
+@media screen and (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie {
+        width: 90%;
+    }
 }
