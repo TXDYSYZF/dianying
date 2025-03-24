@@ -75,11 +75,11 @@ body {
 
 /* 图片适配样式 */
 .movie img {
-    width: 100%; /* 图片宽度占满容器 */
-    height: auto; /* 高度自动适配，保持比例 */
+    max-width: 100%; /* 确保图片不会超出容器 */
+    height: auto; /* 保持原始比例 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
-    object-fit: cover; /* 图片裁剪 */
+    object-fit: contain; /* 保持完整显示，不裁剪 */
 }
 
 /* 适配手机和电脑屏幕 */
