@@ -1,6 +1,6 @@
 /* 全局样式 */
 body {
-    background-color: #000; /* 黑色背景 */
+    background-color: #000;
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -17,8 +17,8 @@ h1 {
 /* 电影展示区域 */
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* 自动换行 */
-    justify-content: center; /* 居中 */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     padding: 20px;
 }
@@ -30,8 +30,9 @@ h1 {
     border-radius: 10px;
     text-align: center;
     max-width: 200px;
-    flex: 1 1 calc(25% - 20px); /* 每行最多4个 */
+    flex: 1 1 calc(25% - 20px);
     transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 /* 电影图片 */
@@ -39,55 +40,68 @@ h1 {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.movie img:hover {
-    transform: scale(1.1);
+.movie:hover {
+    transform: scale(1.05);
 }
 
-/* 电影描述信息 */
-.description {
-    display: none;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    border-radius: 8px;
+/* 电影标题 */
+.movie-title {
     margin-top: 10px;
-    font-size: 14px;
-    color: #ffcc00;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-/* 电影播放链接 */
-.description a {
-    color: #ffcc00;
+/* 模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 模态框内容 */
+.modal-content {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* 关闭按钮 */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+/* 剧集按钮 */
+.episode {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffcc00;
+    color: #222;
     text-decoration: none;
     font-weight: bold;
-    display: block;
-    margin-top: 5px;
-    transition: color 0.3s;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-.description a:hover {
-    color: #ff9900;
-    text-decoration: underline;
-}
-
-/* 响应式调整 */
-@media (max-width: 1024px) {
-    .movie {
-        flex: 1 1 calc(33.33% - 20px); /* 3个一行 */
-    }
-}
-
-@media (max-width: 768px) {
-    .movie {
-        flex: 1 1 calc(50% - 20px); /* 2个一行 */
-    }
-}
-
-@media (max-width: 480px) {
-    .movie {
-        flex: 1 1 100%; /* 1个一行 */
-    }
+.episode:hover {
+    background-color: #ff9900;
 }
