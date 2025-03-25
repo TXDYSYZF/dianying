@@ -29,7 +29,7 @@ body {
 /* 统一图片尺寸，防止变形 */
 .movie img {
     width: 100%; /* 确保图片宽度占满容器 */
-    aspect-ratio: 9 / 16; /* 统一16:9比例 */
+    aspect-ratio: auto; /* 统一16:9比例 */
     object-fit: cover; /* 确保图片填充整个框架，不拉伸变形 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
