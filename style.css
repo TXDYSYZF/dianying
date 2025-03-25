@@ -22,14 +22,14 @@ body {
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s;
-    position: relative; /* 使超链接按钮定位 */
+    position: relative;
 }
 
-/* 让所有图片保持一致大小 */
+/* 统一图片尺寸，防止变形 */
 .movie img {
-    width: 100%; /* 图片宽度占满容器 */
-    height: 260px; /* 固定高度，避免大小不一致 */
-    object-fit: cover; /* 保持比例，裁剪超出部分 */
+    width: 100%; /* 宽度撑满容器 */
+    height: 260px; /* 统一高度，防止大小不一 */
+    object-fit: cover; /* 保持比例填充，裁剪溢出部分 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
@@ -48,7 +48,7 @@ body {
 
 /* 按钮区域（默认隐藏，放在图片下方） */
 .movie-links {
-    display: none; /* 默认隐藏按钮 */
+    display: none;
     margin-top: 8px; /* 与图片留点距离 */
 }
 
@@ -68,21 +68,27 @@ body {
     background-color: #444;
 }
 
-/* 适配不同屏幕，确保图片大小一致且行数自动调整 */
+/* 适配不同屏幕，让行数自动调整 */
 @media screen and (min-width: 1200px) {
     .movie {
         width: 18%; /* 电脑端，一行最多5个 */
     }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199px) and (min-width: 768px) {
     .movie {
         width: 30%; /* 平板端，一行最多3个 */
     }
 }
 
-@media screen and (max-width: 1199px) {
+/* 📱 手机端优化：让所有图片大小一致 */
+@media screen and (max-width: 767px) {
     .movie {
-        width: 100%; /* 手机端，一行最多2个 */
+        width: 100%; /* 手机端，一行最多1个 */
+    }
+
+    .movie img {
+        height: 240px; /* 统一手机端图片高度 */
+        object-fit: cover; /* 确保图片比例一致，不变形 */
     }
 }
