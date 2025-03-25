@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 获取所有电影元素
     let movies = document.querySelectorAll(".movie");
 
     movies.forEach(movie => {
         movie.addEventListener("click", function () {
-            // 先隐藏所有超链接按钮
-            document.querySelectorAll(".movie-links").forEach(link => {
-                link.style.display = "none";
-            });
+            let linkContainer = this.querySelector(".movie-links");
 
-            // 显示当前点击的电影的超链接
-            let link = this.querySelector(".movie-links");
-            if (link) {
-                link.style.display = "block";
+            // 切换显示/隐藏状态
+            if (linkContainer.style.display === "block") {
+                linkContainer.style.display = "none"; // 隐藏
+            } else {
+                // 隐藏其他所有的链接
+                document.querySelectorAll(".movie-links").forEach(el => el.style.display = "none");
+
+                linkContainer.style.display = "block"; // 显示当前点击的
             }
         });
     });
