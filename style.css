@@ -88,10 +88,4 @@ body {
     .movie {
         width: 100%; /* 手机端一行显示一个图片 */
      }
- }
-
-    .movie img {
-        height: 180px; /* 统一手机端图片高度 */
-        object-fit: cover; /* 确保图片比例一致，不变形 */
-    }
 }
