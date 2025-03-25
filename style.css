@@ -82,7 +82,8 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-    .movie {
-        width: 80%; /* 手机端，一行最多1个 */
+    .movie img {
+        height: auto;  /* 让高度自适应，保持原始比例 */
+        object-fit: contain; /* 显示完整图片，不裁剪 */
     }
 }
