@@ -86,6 +86,12 @@ body {
 /* 📱 手机端优化：让所有图片大小一致 */
 @media screen and (max-width: 767px) {
     .movie {
-        width: 200px; /* 手机端固定宽度 */
+        width: 100%; /* 手机端一行显示一个图片 */
+        height: auto; /* 适配不同屏幕，避免超出 */
+    }
+
+    .movie img {
+        height: 180px; /* 统一手机端图片高度 */
+        object-fit: cover; /* 确保图片比例一致，不变形 */
     }
 }
