@@ -83,6 +83,6 @@ body {
 
 @media screen and (max-width: 767px) {
     .movie {
-        width: 100%; /* 手机端，一行最多1个 */
+        width: 80%; /* 手机端，一行最多1个 */
     }
 }
