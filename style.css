@@ -81,9 +81,8 @@ body {
     }
 }
 
-@media screen and (max-width: 767px) {
-    .movie img {
-        height: auto;  /* 让高度自适应，保持原始比例 */
-        object-fit: contain; /* 显示完整图片，不裁剪 */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .movie {
+        width: 100%; /* 手机端，一行最多2个 */
     }
 }
