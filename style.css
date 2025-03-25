@@ -87,7 +87,7 @@ body {
 @media screen and (max-width: 767px) {
     .movie {
         width: 100%; /* 手机端一行显示一个图片 */
-        height: auto; /* 适配不同屏幕，避免超出 */
+        height: 100%; /* 适配不同屏幕，避免超出 */
     }
 
     .movie img {
