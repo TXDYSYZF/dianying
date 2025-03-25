@@ -28,7 +28,7 @@ body {
 /* 统一图片尺寸，防止变形 */
 .movie img {
     width: 100%; /* 宽度自动适应容器 */
-    aspect-ratio: 16 / 9; /* 统一 16:9 比例 */
+    aspect-ratio: 9 / 16; /* 统一 9:16 比例 */
     object-fit: cover; /* 填充整个框架，防止拉伸变形 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
