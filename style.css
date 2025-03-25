@@ -29,7 +29,7 @@ body {
 /* 让所有图片保持原始大小 */
 .movie img {
     max-width: 100%; /* 确保不会超出容器 */
-    height: auto; /* 保持原始比例 */
+    height: 260px; /* 保持原始比例 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
     object-fit: contain; /* 保持完整显示，不裁剪 */
