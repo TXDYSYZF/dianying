@@ -3,17 +3,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     movies.forEach(movie => {
         movie.addEventListener("click", function () {
-            let linkContainer = this.querySelector(".movie-links");
+            // 切换 .clicked 类
+            this.classList.toggle("clicked");
 
-            // 切换显示/隐藏状态
-            if (linkContainer.style.display === "block") {
-                linkContainer.style.display = "none"; // 隐藏
-            } else {
-                // 隐藏其他所有的链接
-                document.querySelectorAll(".movie-links").forEach(el => el.style.display = "none");
-
-                linkContainer.style.display = "block"; // 显示当前点击的
-            }
+            // 确保只有一个 .movie 显示链接
+            movies.forEach(otherMovie => {
+                if (otherMovie !== this) {
+                    otherMovie.classList.remove("clicked");
+                }
+            });
         });
     });
 });
