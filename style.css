@@ -30,8 +30,9 @@ body {
 /* 统一图片尺寸，保持原比例 */
 .movie img {
     width: 100%; /* 宽度占满容器 */
-    height: 100%; /* 高度也占满容器 */
-    object-fit: cover; /* 填充整个容器，保持比例，不拉伸 */
+    height: auto; /* 高度自适应，以保持比例 */
+    max-height: 100%; /* 最大高度不超过容器 */
+    object-fit: contain; /* 保持比例，不拉伸 */
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
@@ -87,5 +88,5 @@ body {
 @media screen and (max-width: 767px) {
     .movie {
         width: 100%; /* 手机端一行显示一个图片 */
-     }
+    }
 }
