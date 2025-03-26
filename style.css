@@ -73,13 +73,13 @@ body {
 /* 适配不同屏幕，让行数自动调整 */
 @media screen and (min-width: 1200px) {
     .movie {
-        width: 200px; /* 电脑端固定宽度 */
+        width: 100%; /* 电脑端固定宽度 */
     }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 768px) {
     .movie {
-        width: 200px; /* 平板端固定宽度 */
+        width: 100%; /* 平板端固定宽度 */
     }
 }
 
