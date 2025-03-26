@@ -59,8 +59,8 @@ body {
 /* 点击后显示按钮区域 */
 .movie.clicked .movie-links {
     display: block;
-    position: absolute;
-    bottom: -50px; /* 调整这个值以确保链接显示在图片下方 */
+    position: relative;
+    bottom: 0;
     left: 0;
     right: 0;
 }
