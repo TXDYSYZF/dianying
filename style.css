@@ -55,6 +55,11 @@ body {
     margin-top: 8px; /* 与图片留点距离 */
 }
 
+/* 悬停显示按钮区域 */
+.movie:hover .movie-links {
+    display: block;
+}
+
 /* 按钮样式 */
 .movie-links a {
     display: inline-block;
