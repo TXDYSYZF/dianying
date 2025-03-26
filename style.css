@@ -25,6 +25,7 @@ body {
     position: relative;
     width: 200px; /* 设定固定宽度 */
     height: 260px; /* 设置固定高度 */
+    margin-bottom: 60px; /* 给链接腾出空间 */
 }
 
 /* 统一图片尺寸，保持原比例 */
@@ -55,9 +56,13 @@ body {
     margin-top: 8px; /* 与图片留点距离 */
 }
 
-/* 悬停显示按钮区域 */
-.movie:hover .movie-links {
+/* 点击后显示按钮区域 */
+.movie.clicked .movie-links {
     display: block;
+    position: absolute;
+    bottom: -50px; /* 调整这个值以确保链接显示在图片下方 */
+    left: 0;
+    right: 0;
 }
 
 /* 按钮样式 */
