@@ -83,14 +83,3 @@ body {
 .movie-links a:hover {
     background-color: #444;
 }
-
-/* 确保电影块自适应行数，避免图片重叠 */
-.movie img {
-    width: 100%; /* 图片宽度占满 */
-    height: 180px; /* 保证高度一致 */
-}
-
-/* 为按钮区域增加足够的间距 */
-.movie-links {
-    margin-top: 8px;
-}
