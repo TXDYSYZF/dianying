@@ -17,6 +17,10 @@ body {
     padding: 20px; /* 增加内边距 */
 }
 
+.gallery {
+    margin-top: 50px; /* 整体往下移动 50px */
+}
+
 /* 单个电影/电视剧 */
 .movie {
     text-align: center;
@@ -29,7 +33,7 @@ body {
 
 /* 让图片宽高都放大 2 倍 */
 .movie img {
-    width: 100%; /* 让图片填充.movie */
+    width: 80%; /* 让图片填充.movie */
     height: auto; /* 高度自适应 */
     object-fit: contain; /* 保持完整，不裁剪 */
 }
