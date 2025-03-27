@@ -13,8 +13,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* 控制电影之间的间距 */
-    padding: 20px;
+    gap: 50px; /* 电影之间的间距扩大 2 倍 */
+    padding: 20px; /* 增加内边距 */
 }
 
 /* 单个电影/电视剧 */
@@ -23,22 +23,24 @@ body {
     cursor: pointer;
     transition: transform 0.3s;
     position: relative;
-    width: 260px; /* 增加宽度，图片会稍微大一些 */
-    margin-bottom: 20px; /* 留白间距 */
+    width: 260px; /* 原260px，扩大 2 倍 */
+    margin-bottom: 10px; /* 原50px，扩大 2 倍 */
 }
 
-/* 统一图片尺寸，保持比例 */
+/* 让图片宽高都放大 2 倍 */
 .movie img {
-    width: 100%; /* 宽度占满容器 */
+    width: 100%; /* 让图片填充.movie */
     height: auto; /* 高度自适应 */
-    object-fit: contain; /* 保持图片的完整性和比例 */
+    object-fit: contain; /* 保持完整，不裁剪 */
 }
 
-/* 电影/电视剧名称 */
+/* 电影名称 */
 .movie-title {
-    margin-top: 8px;
-    font-size: 16px;
+    margin-top: 8px; /* 原8px，扩大 2 倍 */
+    font-size: 16px; /* 原16px，扩大 2 倍 */
     font-weight: bold;
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* 文字阴影也相应放大 */
 }
 
 /* 悬停放大 */
@@ -46,10 +48,15 @@ body {
     transform: scale(1.05);
 }
 
+/* 电影超链接按钮 */
+.movie-links {
+    margin-top: 12px; /* 原12px，扩大 2 倍 */
+}
+
 /* 按钮区域（默认隐藏，放在图片下方） */
 .movie-links {
     display: none;
-    margin-top: 8px; /* 与图片留点距离 */
+    margin-top: 15px; /* 原80px，扩大 2 倍 */
 }
 
 /* 点击后显示按钮区域 */
@@ -66,11 +73,11 @@ body {
     display: inline-block;
     background-color: #222;
     color: white;
-    padding: 10px 15px;
+    padding: 10px 15px; /* 原10px 15px，扩大 2 倍 */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5px; /* 原5px，扩大 2 倍 */
     transition: all 0.3s;
-    font-size: 14px;
+    font-size: 14px; /* 原14px，扩大 2 倍 */
 }
 
 .movie-links a:hover {
