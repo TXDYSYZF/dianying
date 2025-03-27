@@ -1,3 +1,9 @@
+/* 全局变量，方便统一调整 */
+:root {
+    --spacing-multiplier: 1;  /* 统一缩放倍数 */
+    --text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+}
+
 /* 黑色背景 */
 body {
     background-color: #000;
@@ -13,12 +19,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px; /* 电影之间的间距扩大 2 倍 */
-    padding: 20px; /* 增加内边距 */
-}
-
-.gallery {
-    margin-top: 50px; /* 整体往下移动 50px */
+    gap: calc(25px * var(--spacing-multiplier)); /* 电影之间的间距扩大 */
+    padding: 20px;
 }
 
 /* 单个电影/电视剧 */
@@ -27,24 +29,35 @@ body {
     cursor: pointer;
     transition: transform 0.3s;
     position: relative;
-    width: 260px; /* 原260px，扩大 2 倍 */
-    margin-bottom: 10px; /* 原50px，扩大 2 倍 */
+    width: calc(260px * var(--spacing-multiplier)); /* 电影块整体放大 */
+    margin-bottom: calc(25px * var(--spacing-multiplier)); /* 间距放大 */
 }
 
-/* 让图片宽高都放大 2 倍 */
+/* 让图片等比例放大 */
 .movie img {
-    width: 80%; /* 让图片填充.movie */
-    height: auto; /* 高度自适应 */
-    object-fit: contain; /* 保持完整，不裁剪 */
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 第一行的间距调整 */
+.movie:nth-child(-n+3) {
+    margin-top: calc(15px * var(--spacing-multiplier)); /* 控制第一行的高度 */
 }
 
 /* 电影名称 */
 .movie-title {
-    margin-top: 8px; /* 原8px，扩大 2 倍 */
-    font-size: 16px; /* 原16px，扩大 2 倍 */
+    margin-top: calc(8px * var(--spacing-multiplier));
+    font-size: calc(16px * var(--spacing-multiplier));
     font-weight: bold;
     color: white;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); /* 文字阴影也相应放大 */
+    text-shadow: var(--text-shadow);
+}
+
+/* 电影超链接按钮 */
+.movie-links {
+    display: none;
+    margin-top: calc(15px * var(--spacing-multiplier));
 }
 
 /* 悬停放大 */
@@ -52,24 +65,9 @@ body {
     transform: scale(1.05);
 }
 
-/* 电影超链接按钮 */
-.movie-links {
-    margin-top: 12px; /* 原12px，扩大 2 倍 */
-}
-
-/* 按钮区域（默认隐藏，放在图片下方） */
-.movie-links {
-    display: none;
-    margin-top: 15px; /* 原80px，扩大 2 倍 */
-}
-
 /* 点击后显示按钮区域 */
 .movie.clicked .movie-links {
     display: block;
-    position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 /* 按钮样式 */
@@ -77,11 +75,11 @@ body {
     display: inline-block;
     background-color: #222;
     color: white;
-    padding: 10px 15px; /* 原10px 15px，扩大 2 倍 */
+    padding: calc(10px * var(--spacing-multiplier)) calc(15px * var(--spacing-multiplier));
     text-decoration: none;
-    border-radius: 5px; /* 原5px，扩大 2 倍 */
+    border-radius: calc(5px * var(--spacing-multiplier));
     transition: all 0.3s;
-    font-size: 14px; /* 原14px，扩大 2 倍 */
+    font-size: calc(14px * var(--spacing-multiplier));
 }
 
 .movie-links a:hover {
