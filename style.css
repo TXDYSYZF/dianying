@@ -40,10 +40,11 @@ body {
     object-fit: contain;
 }
 
-/* 第一行的间距调整 */
+/* 第一行的间距调整 
 .movie:nth-child(-n+3) {
     margin-top: calc(15px * var(--spacing-multiplier)); /* 控制第一行的高度 */
 }
+*/
 
 /* 电影名称 */
 .movie-title {
